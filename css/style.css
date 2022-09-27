@@ -1,0 +1,371 @@
+/* Start Variables */
+:root {
+  --main-color: #93cb52;
+  --bg-color: rgb(51, 51, 51);
+  --main-padding: 25px 0;
+}
+/* End Variables */
+/* Start Scroll Bar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background-color: #fff;
+  box-shadow: 0 0 1px #000 inset;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+  border-radius: 10px;
+}
+/* End Scroll Bar */
+/* Start Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* End Reset */
+/* Start Main Styling */
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.4;
+}
+p {
+  margin: 10px 0;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
+span {
+  color: var(--main-color);
+}
+i {
+  background-color: var(--main-color);
+  color: var(--bg-color);
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  overflow: hidden;
+}
+.l-heading {
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+.m-heading {
+  font-size: 35px;
+  margin-bottom: 10px;
+}
+.lead {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+/* End Main Styling */
+/* Start Header */
+header {
+  background-color: var(--bg-color);
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  transition: 0.5s;
+}
+header .header-content {
+  color: #fff;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo {
+  font-size: 25px;
+}
+header .logo i {
+  background-color: transparent;
+  color: var(--main-color);
+}
+header nav {
+  display: flex;
+}
+header nav i::before{
+  display: none;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+header nav li {
+  margin-left: 10px;
+}
+header nav li a {
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: all 0.4s ease;
+}
+header nav li a:hover {
+  background-color: var(--main-color);
+}
+header .scroll-top {
+  background-color: var(--main-color);
+  color: #fff;
+  font-weight: bold;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  position: fixed;
+  right: -40px;
+  bottom: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+}
+header .show-s {
+  right: 20px;
+}
+/* End Header */
+/* Start Showcase */
+.showcase {
+  color: #fff;
+  text-align: center;
+  height: calc(100vh - 60px);
+  background: url('../image/showcase.jpg') no-repeat center center/cover;
+}
+.showcase .showcase-content {
+  padding: 0 30px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0,0,0, 0.4);
+}
+.showcase a {
+  background-color: var(--main-color);
+  padding: 10px 35px;;
+  border-radius: 5px;
+  transition: all 0.5s ease;
+}
+.showcase a:hover {
+  background-color: #7ab436;
+}
+/* End Showcase */
+/* Start What We Do */
+.what {
+  padding: var(--main-padding); 
+  color: var(--bg-color);
+}
+.what h2 {
+  text-align: center;
+}
+.what .items {
+  padding: 10px 30px;
+  display: flex;
+}
+.what .items .item {
+  display: flex;
+  padding: 10px;
+}
+.what .items .item i {
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 25px;
+  margin-right: 20px;
+  align-self: center;
+}
+/* End What We Do */
+/* Start Who We Are */
+.who {
+  display: flex;
+}
+.who > div {
+  flex: 1;
+}
+.who .who-img {
+  background: url('../image/people.jpg') no-repeat center center/cover;
+}
+.who .who-text {
+  background-color: var(--bg-color);
+  color: #fff;
+  padding: 30px;
+}
+.who .who-text p {
+  padding-bottom: 10px;
+}
+.who .who-text ul {
+  padding-top: 5px;
+  list-style: none;
+}
+.who .who-text ul li {
+  padding: 10px 0 7px;
+  border-bottom: 1px dotted #444;
+}
+/* End Who We Are */
+/* Start Our Client */
+.clients {
+  padding: var(--main-padding);
+  text-align: center;
+}
+.clients .our-clients {
+  display: flex;
+}
+.clients .our-clients div img {
+  display: block;
+  margin: auto;
+  width: 60%;
+}
+/* End Our Client */
+/* Start Contact */
+.contact {
+  display: flex;
+}
+.contact .contact-form {
+  background-color: var(--main-color);
+  color: #fff;
+  width: 35%;
+  padding: 30px;
+}
+.contact .contact-form p {
+  padding-bottom: 5px;
+}
+.contact .contact-form form .form-group {
+  width: 95%;
+  margin: 0 auto 10px;
+}
+.contact .contact-form form label {
+  display: block;
+}
+.contact .contact-form form textarea {
+  font-family: inherit;
+  height: 100px;
+}
+.contact .contact-form form input,
+.contact .contact-form form textarea {
+  width: 100%;
+  padding: 8px;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+}
+.contact .contact-form form input[type="submit"] {
+  background-color: var(--bg-color);
+  color: #fff;
+  width: 100%;
+  border: none;
+  padding: 10px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.contact .contact-form form input[type="submit"]:hover {
+  background-color: #7ab436;
+}
+.contact .map {
+  width: 65%;
+  background-color: black;
+}
+/* End Contact */
+/* Start Footer */
+footer {
+  background-color: var(--bg-color);
+  color: #fff;
+  text-align: center;
+  padding: 30px 10px;
+}
+/* End Footer */
+
+/* Meaia Q */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .what .items {
+    display: block;
+  }
+}
+
+/* Meaia Q */
+@media (max-width: 767px) {
+  header .header-content {
+    position: relative;
+  }
+  header nav i::before {
+    display: block;
+    background-color: var(--bg-color);
+    color: var(--main-color);
+    font-size: 20px;
+    cursor: pointer;
+  }
+  header nav ul {
+    position: absolute;
+    width: 200px;
+    flex-direction: column;
+    background-color: var(--bg-color);
+    top: 65px;
+    right: 0px;
+    height: 0;
+    overflow: hidden;
+    transition: 0.4s;
+  }
+  header nav ul.show {
+    height: 173.57px;
+  }
+  header nav ul li {
+    margin: 0;
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 1px dotted #444;
+  }
+  header nav ul li a {
+    display: block;
+    padding: 10px 75px 10px 15px;
+    transition: 0.5s;
+  }
+  header nav ul li a:hover {
+    background: var(--bg-color);
+    transform: translateX(10%);
+  }
+  .showcase .l-heading {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+  .showcase .lead {
+    font-size: 16px;
+  }
+  .what .items {
+    display: block;
+  }
+  .what .items {
+    padding: 10px 0;
+  }
+  .what .container {
+    padding: 0;
+  }
+  .who .who-img {
+    display: none;
+  }
+  .clients .our-clients div:last-of-type {
+    display: none;
+  }
+  .clients .our-clients div img {
+    width: 80%;
+    }
+  .contact {
+    flex-direction: column;
+  }
+  .contact .contact-form,
+  .contact .map {
+    width: 100%;
+  }
+  .contact .map {
+    border-top: 4px solid var(--bg-color);
+    height: 200px;
+  }
+  footer {
+    padding: 20px 10px;
+    font-size: 15px;
+  }
+}
